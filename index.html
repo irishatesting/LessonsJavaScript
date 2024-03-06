@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Learnning JS</title>
+    </head>
+    <body>
+<script type="text/javascript">
+
+    let ageString = prompt("Введіть кількість років: ");
+    let age = Number(ageString); 
+ 
+    if ((age <= 0) || (isNaN(age))) {
+        alert ("Не валідне число років");
+    }
+    else {
+        let lastDigit = age % 10;
+        if (age % 100 >= 11 && age % 100 <= 19) {
+            alert(age + " років");
+        }
+        else {
+            switch (lastDigit) {
+            case 1:
+                alert(age + " рік");
+                break;
+            case 2:
+            case 3:
+            case 4:
+                alert(age + " роки");
+                break;
+            default:
+                alert(age + " років");
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
